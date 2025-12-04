@@ -1,6 +1,7 @@
 from flask import Flask,request,render_template
 import numpy as np
 import pickle
+from mangum import Mangum
 model=pickle.load(open("model.pkl","rb"))
 app=Flask(__name__)
 handler=Mangum(app)
