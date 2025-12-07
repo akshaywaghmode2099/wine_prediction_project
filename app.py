@@ -23,6 +23,7 @@ def wine1():
     Sulphates=eval(request.form.get("Sulphates"))
     alcohol=eval(request.form.get("alcohol"))
     result=model.predict(np.array([Fixed_Acidity,volatile_Acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,PH,Sulphates,alcohol]).reshape(1,11))
+    print("Result")
     if result[0]<=6:
         return "<h1 style='color:green'>Good,Yes Plz Drink</h1>"
     else:
