@@ -27,5 +27,6 @@ def wine1():
     if result[0]<=6:
         return "<h1 style='color:green'>Good,Yes Plz Drink</h1>"
     else:
+        print("else")
         return "<h1 style='color:red'>Not Good,So Sorry</h1>"
 app.run(debug=True)
